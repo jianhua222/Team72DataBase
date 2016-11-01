@@ -5,9 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+
+import java.sql.*;
 
 public class Main extends Application {
 
@@ -21,6 +20,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         Connection con = null;
+        Statement stmt;
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
@@ -29,13 +29,37 @@ public class Main extends Application {
             if(!con.isClosed())
                 System.out.println("Successfully connected to " +
                         "MySQL server using TCP/IP...");
+            //This will be the first sql statement!
+            stmt = con.createStatement(
+                                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                                    ResultSet.CONCUR_READ_ONLY);
+            String sql;
+            sql= "INSERT INTO Major (major_name, depart_name)" +
+                    "VALUES ('CSE', 'COC')";
+            stmt.executeUpdate(sql);
+
+            sql= "INSERT INTO Major (major_name, depart_name)" +
+                    "VALUES ('CS', 'COC')";
+            stmt.executeUpdate(sql);
+
+            sql= "INSERT INTO Major (major_name, depart_name)" +
+                    "VALUES ('CEE', 'COE')";
+            stmt.executeUpdate(sql);
+            System.out.println("Inserted records into the table...");
+
+            //Clean-up environment
+            stmt.close();
+            con.close();
+
         } catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
         } finally {
             try {
                 if(con != null)
                     con.close();
-            } catch(SQLException e) {}
+            } catch(SQLException e) {
+                e.printStackTrace();
+            }
         }
         launch(args);
     }
