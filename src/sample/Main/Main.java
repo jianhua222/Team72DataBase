@@ -34,16 +34,16 @@ public class Main extends Application {
                                     ResultSet.TYPE_SCROLL_INSENSITIVE,
                                     ResultSet.CONCUR_READ_ONLY);
             String sql;
-            sql= "INSERT INTO Major (major_name, depart_name)" +
-                    "VALUES ('CSE', 'COC')";
+            sql= "INSERT INTO User (user_name, password, stuflag, GT_email, year, Major_name, Adminflag)" +
+                    "VALUES ('Huajian', '12341234', True, 'ff@gatech.edu', 'junior', 'CS', False)";
             stmt.executeUpdate(sql);
 
-            sql= "INSERT INTO Major (major_name, depart_name)" +
-                    "VALUES ('CS', 'COC')";
+            sql= "INSERT INTO User (user_name, password, stuflag, GT_email, year, Major_name, Adminflag)" +
+                    "VALUES ('Runqi', '12341234', True, 'dd@gatech.edu', 'junior', 'CS', False)";
             stmt.executeUpdate(sql);
 
-            sql= "INSERT INTO Major (major_name, depart_name)" +
-                    "VALUES ('CEE', 'COE')";
+            sql= "INSERT INTO User (user_name, password, stuflag, GT_email, year, Major_name, Adminflag)" +
+                    "VALUES ('Zhengqi', '12341234', True, 'gg@gatech.edu', 'junior', 'CS', False)";
             stmt.executeUpdate(sql);
             System.out.println("Inserted records into the table...");
 
