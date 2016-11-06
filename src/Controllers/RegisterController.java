@@ -22,7 +22,7 @@ public class RegisterController {
     private TextField passwordField;
     @FXML
     private TextField confirmField;
-
+    public RegisterController(){}
     @FXML
     private void createButtonpressed(){
         UserManagement.register(this.usernameField.getText(), this.emailField.getText(), this.passwordField.getText());
