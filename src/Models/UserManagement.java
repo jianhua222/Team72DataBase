@@ -1,4 +1,6 @@
-package sample.Main;
+package Models;
+
+import Models.User;
 
 import java.sql.*;
 
@@ -6,8 +8,8 @@ import java.sql.*;
  * Created by Allen on 11/6/2016.
  */
 public class UserManagement {
-    public  User currentUser;
-    public void register(String user_name, String GT_email,String password){
+    public User currentUser;
+    public static void register(String user_name, String GT_email,String password){
         Connection con = null;
         Statement stmt;
         try {
