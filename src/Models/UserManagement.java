@@ -25,8 +25,9 @@ public class UserManagement {
                     ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
             String sql;
-            sql= "INSERT INTO User (user_name, password, stuflag, GT_email, year, Major_name, Adminflag)" +
-                    "VALUES ("+user_name+","+password+","+"student,"+GT_email+")";
+            sql= "INSERT INTO User (user_name, password, UserType, GT_email) " +
+                    "VALUES ('"+user_name+"', '"+password+"', "+"'Student', '"+GT_email+"' );";
+            System.out.println(sql);
             stmt.executeUpdate(sql);
             System.out.println("Inserted records into the table...");
             //Clean-up environment
