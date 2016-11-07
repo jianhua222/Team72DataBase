@@ -19,23 +19,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://C:/Program Files/Java/jdk1.8.0_91/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://C:/Program Files/Java/jdk1.8.0_91/mysql-connector-java-5.1.40/mysql-connector-java-5.1.40" recursive="false" />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://D:/Program Files/Java/mysql-connector-java-5.1.40" />
+          <root url="file://C:/Program Files/Java/mysql-connector-java-5.1.40" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://D:/Program Files/Java/mysql-connector-java-5.1.40/src" />
+          <root url="file://C:/Program Files/Java/mysql-connector-java-5.1.40/src" />
         </SOURCES>
-        <jarDirectory url="file://D:/Program Files/Java/mysql-connector-java-5.1.40" recursive="false" />
+        <jarDirectory url="file://C:/Program Files/Java/mysql-connector-java-5.1.40" recursive="false" />
       </library>
     </orderEntry>
   </component>
