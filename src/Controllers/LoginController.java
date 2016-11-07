@@ -24,7 +24,25 @@ public class LoginController {
     private TextField passwordField;
     @FXML
     private void loginButtonpressed(){
-        UserManagement.login(this.usernameField.getText(), this.passwordField.getText());
+        boolean successLogin = UserManagement.login(this.usernameField.getText(), this.passwordField.getText());
+        if (successLogin){
+            System.out.println("Successfully Login");
+        }else {
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/Error.fxml"));
+                root = loader.load();
+                //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
+                ErrorController controller =  loader.<ErrorController>getController();
+                String errorText = "Login failed, please try again";
+                controller.setLabel(errorText);
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
+        }
     }
     @FXML
     private void registerButtonpressed(){

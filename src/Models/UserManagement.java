@@ -9,7 +9,7 @@ import java.sql.*;
  */
 public class UserManagement {
     public User currentUser;
-    public static void login(String user_name, String password){
+    public static boolean login(String user_name, String password){
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -25,9 +25,6 @@ public class UserManagement {
             ps = con.prepareStatement( "SELECT user_name, password FROM User WHERE user_name = ? AND password = ?" );
             // 使用问号作为参数的标示
 
-            // 进行参数设置
-            // 与大部分Java API中下标的使用方法不同，字段的下标从1开始，1代表第一个问号
-            // 当然，还有其他很多针对不同类型的类似的PreparedStatement.setXXX()方法
             ps.setString(1, user_name);
             ps.setString(2, password );
 
@@ -35,13 +32,14 @@ public class UserManagement {
             rs = ps.executeQuery();
 
             if ( rs.next() ) {
-                System.out.println("Successfully Login");
+                return true;
             }else {
-                System.out.println("Login failed");
+                return false;
             }
 
         } catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
+            return false;
         } finally {
             try {
                 if(con != null)

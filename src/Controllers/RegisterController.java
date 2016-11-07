@@ -1,9 +1,15 @@
 package Controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import Models.UserManagement;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 /**
@@ -25,11 +31,30 @@ public class RegisterController {
     public RegisterController(){}
     @FXML
     private void createButtonpressed(){
-        UserManagement.register(this.usernameField.getText(), this.emailField.getText(), this.passwordField.getText());
+        if (this.passwordField.getText().equals(this.confirmField.getText())){
+            UserManagement.register(this.usernameField.getText(), this.emailField.getText(), this.passwordField.getText());
+        }else {
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/Error.fxml"));
+                root = loader.load();
+                //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
+                ErrorController controller =  loader.<ErrorController>getController();
+                String errorText = "password doesn't match, please check again...";
+                controller.setLabel(errorText);
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
+        }
     }
+
 
     @FXML
     private void cancelButtonpressed(){
-
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 }
