@@ -14,7 +14,7 @@ import java.util.Observable;
  */
 public class MainPageController {
     @FXML
-    ListView<String> listView;
+    private ListView<String> listView;
 
     public void initialize(){
         Connection con = null;
@@ -38,25 +38,33 @@ public class MainPageController {
             //ps.setString(2, password );
 
             // 结果集
+            System.out.println("here1");
             rs = ps1.executeQuery();
+            System.out.println(rs);
             ObservableList<String> tem = FXCollections.observableArrayList();
             while (rs.next()) {
 
                 tem.add(rs.getString("cname"));
+                System.out.println(tem);
 
             }
-
+            System.out.println("here4");
             rs = ps2.executeQuery();
             while (rs.next()) {
 
                 tem.add(rs.getString("pname"));
-
+                System.out.println(tem);
             }
+            System.out.println("here1");
+            if(tem == null){
+                System.out.println("a");
+            }
+
             listView.setItems(tem);
 
 
         } catch(Exception e) {
-            System.err.println("Exception: " + e.getMessage());
+            System.err.println("Exception: 11" + e.getMessage());
 
         } finally {
             try {
