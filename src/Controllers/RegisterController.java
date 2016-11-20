@@ -51,10 +51,18 @@ public class RegisterController {
         }
     }
 
-
     @FXML
     private void cancelButtonpressed(){
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Login.fxml"));
+            Stage primaryStage = (Stage) cancelButton.getScene().getWindow();
+            primaryStage.setTitle("Login");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        }
+        catch (IOException e){
+
+        }
+
     }
 }
