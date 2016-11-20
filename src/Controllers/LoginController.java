@@ -49,10 +49,10 @@ public class LoginController {
         Parent root;
         try {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Register.fxml"));
-            //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.show();
+            Stage primaryStage = (Stage) registerButton.getScene().getWindow();
+            primaryStage.setTitle("Register");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
         }catch (IOException e){
 
         }
