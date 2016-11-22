@@ -16,6 +16,8 @@ import java.io.IOException;
  */
 public class LoginController {
     @FXML
+    private Button loginButton;
+    @FXML
     private Button registerButton;
     //public LoginController(){}
     @FXML
@@ -27,6 +29,16 @@ public class LoginController {
         boolean successLogin = UserManagement.login(this.usernameField.getText(), this.passwordField.getText());
         if (successLogin){
             System.out.println("Successfully Login");
+            try{
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MainPage.fxml"));
+                Stage primaryStage = (Stage)loginButton.getScene().getWindow();
+                primaryStage.setTitle("MainPage");
+                primaryStage.setScene(new Scene(root, 600, 400));
+                primaryStage.show();
+            }
+            catch (IOException e){
+
+            }
         }else {
             Parent root;
             try {

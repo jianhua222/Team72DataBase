@@ -1,8 +1,10 @@
 package Controllers;
 
+import Models.PopulatingComboDownBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 
 import java.sql.*;
@@ -15,8 +17,18 @@ import java.util.Observable;
 public class MainPageController {
     @FXML
     private ListView<String> listView;
+    @FXML
+    private ComboBox designationBox;
+    @FXML
+    private ComboBox majorBox;
+    @FXML
+    private ComboBox yearBox;
+    @FXML
+    private ComboBox categoryBox;
 
     public void initialize(){
+        ArrayList<String> designations = PopulatingComboDownBox.populateDesignationBox();
+        designationBox.getItems().addAll(designations);
         Connection con = null;
         PreparedStatement ps1 = null;
         PreparedStatement ps2 = null;
