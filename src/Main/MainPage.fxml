@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.592964824120603" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainPageController">
+<SplitPane dividerPositions="0.592964824120603" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainPageController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="260.0" prefWidth="598.0">
          <children>
@@ -29,6 +29,7 @@
             <RadioButton layoutX="481.0" layoutY="168.0" mnemonicParsing="false" text="Both" />
             <Button layoutX="353.0" layoutY="195.0" mnemonicParsing="false" text="Apply Filter" />
             <Button layoutX="454.0" layoutY="195.0" mnemonicParsing="false" text="Reset Filer" />
+            <Button layoutX="27.0" layoutY="15.0" mnemonicParsing="false" text="Me" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
