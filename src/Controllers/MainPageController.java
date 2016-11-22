@@ -4,9 +4,15 @@ import Models.PopulatingComboDownBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Observable;
@@ -25,6 +31,8 @@ public class MainPageController {
     private ComboBox yearBox;
     @FXML
     private ComboBox categoryBox;
+    @FXML
+    private Button meButton;
 
     public void initialize(){
         ArrayList<String> designations = PopulatingComboDownBox.populateDesignationBox();
@@ -60,6 +68,19 @@ public class MainPageController {
             listView.setItems(tem);
         } catch(Exception e) {
             System.err.println("Exception: 11" + e.getMessage());
+
+        }
+    }
+    @FXML
+    private void meButtonpressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Me.fxml"));
+            Stage primaryStage = (Stage) meButton.getScene().getWindow();
+            primaryStage.setTitle("MainPage");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        }
+        catch (IOException e){
 
         }
     }

@@ -29,7 +29,7 @@
             <RadioButton layoutX="481.0" layoutY="168.0" mnemonicParsing="false" text="Both" />
             <Button layoutX="353.0" layoutY="195.0" mnemonicParsing="false" text="Apply Filter" />
             <Button layoutX="454.0" layoutY="195.0" mnemonicParsing="false" text="Reset Filer" />
-            <Button layoutX="27.0" layoutY="15.0" mnemonicParsing="false" text="Me" />
+            <Button fx:id="meButton" layoutX="27.0" layoutY="15.0" mnemonicParsing="false" onAction="#meButtonpressed" text="Me" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
