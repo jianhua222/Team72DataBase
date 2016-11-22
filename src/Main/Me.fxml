@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MeController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MeController">
    <children>
-      <Label layoutX="279.0" layoutY="58.0" text="Me" />
-      <Button fx:id="backButton" layoutX="261.0" layoutY="318.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+      <Label layoutX="286.0" layoutY="22.0" text="Me">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+
+      <Hyperlink fx:id="editProfile" layoutX="253.0" layoutY="132.0" text="Edit Profile">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="myApplication" layoutX="236.0" layoutY="183.0" text="My Application">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="backButton" layoutX="273.0" layoutY="341.0" mnemonicParsing="false" onAction="#backButtonpressed" text="Back">
+        <font>
+            <Font size="16.0" />
+        </font>
+      </Button>
    </children>
 </Pane>
