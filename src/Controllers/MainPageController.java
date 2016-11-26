@@ -10,14 +10,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Observable;
+import java.util.*;
 
 /**
  * Created by Ranchy on 11/20/2016.
@@ -36,7 +34,12 @@ public class MainPageController {
     @FXML
     private Button meButton;
     @FXML
-    private ListView<Result> resultView;
+    private TableView<Result> result;
+    @FXML
+    private TableColumn<Result,String> name;
+    @FXML
+    private TableColumn<Result, String> type;
+
 
     public void initialize(){
         designationBox.getItems().addAll(PopulatingComboDownBox.populateDesignationBox());
@@ -63,17 +66,22 @@ public class MainPageController {
             //ps.setString(1, user_name);
             //ps.setString(2, password );
             // 结果集
+            name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
+            type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
+            List<Result> tem = new ArrayList<>();
             rs = ps1.executeQuery();
             while (rs.next()) {
-                System.out.print(rs.getString("cname"));
-                resultView.getItems().add(new Result(rs.getString("cname"),"Course"));
+                tem.add(new Result(rs.getString("cname"),"Course"));
+                //
+                // resultView.getItems().add(new Result(rs.getString("cname"),"Course"));
 
             }
             rs = ps2.executeQuery();
             while (rs.next()) {
-                resultView.getItems().add(new Result(rs.getString("pname"), "Project"));
+                tem.add(new Result(rs.getString("pname"), "Project"));
+                //resultView.getItems().add(new Result(rs.getString("pname"), "Project"));
             }
-
+            result.getItems().setAll(tem);
         } catch(Exception e) {
             System.err.println("Exception: 11" + e.getMessage());
 
