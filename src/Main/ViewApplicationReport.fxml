@@ -15,7 +15,7 @@
             <TableView layoutX="35.0" prefHeight="225.0" prefWidth="526.0">
               <columns>
                   <TableColumn prefWidth="238.0" text="Project" />
-                <TableColumn prefWidth="112.0" text="Applicant Major" />
+                <TableColumn prefWidth="112.0" text="#of Applicants" />
                 <TableColumn prefWidth="100.0" text="Applicant Year" />
                   <TableColumn prefWidth="100.0" text="Status" />
               </columns>
