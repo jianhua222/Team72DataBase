@@ -14,12 +14,12 @@
          </font>
       </Label>
 
-      <Hyperlink fx:id="editProfile" layoutX="253.0" layoutY="132.0" text="Edit Profile">
+      <Hyperlink fx:id="editProfile" layoutX="253.0" layoutY="132.0" onAction="#editProfilePressed" text="Edit Profile">
          <font>
             <Font size="18.0" />
          </font>
       </Hyperlink>
-      <Hyperlink fx:id="myApplication" layoutX="236.0" layoutY="183.0" text="My Application">
+      <Hyperlink fx:id="myApplication" layoutX="236.0" layoutY="183.0" onAction="#myApplicationPressed" text="My Application">
          <font>
             <Font size="18.0" />
          </font>
