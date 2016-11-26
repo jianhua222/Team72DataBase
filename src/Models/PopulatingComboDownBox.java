@@ -114,17 +114,15 @@ public class PopulatingComboDownBox {
             System.out.print(tem);
         } catch(Exception e) {
             System.err.println("Exception: 11" + e.getMessage());
-
         }
         return tem;
     }
     public static HashMap<String,String> populateResult() {
         HashMap<String,String> tem = new HashMap<>();
-
-        Connection con = null;
-        PreparedStatement ps1 = null;
-        PreparedStatement ps2 = null;
-        ResultSet rs = null;
+        Connection con;
+        PreparedStatement ps1;
+        PreparedStatement ps2;
+        ResultSet rs;
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
