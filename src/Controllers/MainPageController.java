@@ -40,7 +40,7 @@ public class MainPageController {
     @FXML
     private TableColumn<Result, String> type;
 
-
+    public static Result selectedResult;
     public void initialize(){
         designationBox.getItems().addAll(PopulatingComboDownBox.populateDesignationBox());
         yearBox.getItems().addAll(PopulatingComboDownBox.populateYearBox());
@@ -110,16 +110,7 @@ public class MainPageController {
     }
     @FXML
     private void resultPressed(){
-        Result tem = result.getSelectionModel().getSelectedItem();
-        String resultName = tem.getName();
-        String resultType = tem.getType();
-        if(resultType.equals("Project")){
-
-        }
-        else if(resultType.equals("Course")){
-
-        }
-        System.out.print(resultName+resultType);
+        selectedResult = result.getSelectionModel().getSelectedItem();
     }
 
 }
