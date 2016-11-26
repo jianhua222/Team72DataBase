@@ -10,14 +10,14 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="6.0" layoutY="71.0" prefHeight="225.0" prefWidth="594.0">
+      <AnchorPane layoutX="3.0" layoutY="81.0" prefHeight="227.0" prefWidth="594.0">
          <children>
-            <TableView layoutX="35.0" prefHeight="225.0" prefWidth="526.0">
+            <TableView layoutX="23.0" prefHeight="238.0" prefWidth="552.0">
               <columns>
-                  <TableColumn prefWidth="238.0" text="Project" />
+                  <TableColumn prefWidth="221.00001525878906" text="Project" />
                 <TableColumn prefWidth="112.0" text="#of Applicants" />
-                <TableColumn prefWidth="100.0" text="Applicant Year" />
-                  <TableColumn prefWidth="100.0" text="Status" />
+                <TableColumn prefWidth="111.0" text="accept rate" />
+                  <TableColumn prefWidth="106.0" text="top 3 major" />
               </columns>
             </TableView>
          </children>
@@ -32,15 +32,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="392.0" layoutY="328.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="75.0" text="Accept">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="490.0" layoutY="328.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="75.0" text="Reject">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
+      <Label layoutX="39.0" layoutY="57.0" prefHeight="17.0" prefWidth="263.0" text="TO DO:   Fetch the stats and display here  //label" />
    </children>
 </Pane>
