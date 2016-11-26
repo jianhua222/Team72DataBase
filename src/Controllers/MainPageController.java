@@ -33,10 +33,16 @@ public class MainPageController {
     private ComboBox categoryBox;
     @FXML
     private Button meButton;
+    @FXML
+    private Button applyButton;
+    @FXML
+    private Button resetButton;
 
     public void initialize(){
-        ArrayList<String> designations = PopulatingComboDownBox.populateDesignationBox();
-        designationBox.getItems().addAll(designations);
+        designationBox.getItems().addAll(PopulatingComboDownBox.populateDesignationBox());
+        yearBox.getItems().addAll(PopulatingComboDownBox.populateYearBox());
+        majorBox.getItems().addAll(PopulatingComboDownBox.populateMajorBox());
+        categoryBox.getItems().addAll(PopulatingComboDownBox.populateCategoryBox());
         Connection con = null;
         PreparedStatement ps1 = null;
         PreparedStatement ps2 = null;
@@ -72,7 +78,7 @@ public class MainPageController {
         }
     }
     @FXML
-    private void meButtonpressed(){
+    private void meButtonPressed(){
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Me.fxml"));
             Stage primaryStage = (Stage) meButton.getScene().getWindow();
@@ -84,4 +90,13 @@ public class MainPageController {
 
         }
     }
+    @FXML
+    private void applyButtonPressed(){
+
+    }
+    @FXML
+    private void resetButtonPressed(){
+
+    }
+
 }

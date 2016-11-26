@@ -17,7 +17,7 @@
             <Label layoutX="49.0" layoutY="71.0" text="Title" />
             <TextField layoutX="97.0" layoutY="67.0" />
             <Label layoutX="252.0" layoutY="71.0" text="Category" />
-            <ComboBox layoutX="311.0" layoutY="67.0" prefWidth="150.0" promptText="Please Select" />
+            <ComboBox fx:id="categoryBox" layoutX="311.0" layoutY="67.0" prefWidth="150.0" promptText="Please Select" />
             <Label layoutX="45.0" layoutY="117.0" text="Designation" />
             <Label layoutX="47.0" layoutY="147.0" text="Major" />
             <Label layoutX="47.0" layoutY="176.0" text="Year" />
@@ -27,9 +27,9 @@
             <RadioButton layoutX="324.0" layoutY="168.0" mnemonicParsing="false" text="Project" />
             <RadioButton layoutX="404.0" layoutY="168.0" mnemonicParsing="false" text="Course" />
             <RadioButton layoutX="481.0" layoutY="168.0" mnemonicParsing="false" text="Both" />
-            <Button layoutX="353.0" layoutY="195.0" mnemonicParsing="false" text="Apply Filter" />
-            <Button layoutX="454.0" layoutY="195.0" mnemonicParsing="false" text="Reset Filer" />
-            <Button fx:id="meButton" layoutX="27.0" layoutY="15.0" mnemonicParsing="false" onAction="#meButtonpressed" text="Me" />
+            <Button fx:id="applyButton" layoutX="353.0" layoutY="195.0" mnemonicParsing="false" onAction="#applyButtonPressed" text="Apply Filter" />
+            <Button fx:id="resetButton" layoutX="454.0" layoutY="195.0" mnemonicParsing="false" onAction="#resetButtonPressed" text="Reset Filer" />
+            <Button fx:id="meButton" layoutX="27.0" layoutY="15.0" mnemonicParsing="false" onAction="#meButtonPressed" text="Me" />
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
