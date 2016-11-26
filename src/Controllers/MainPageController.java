@@ -111,6 +111,18 @@ public class MainPageController {
     @FXML
     private void resultPressed(){
         selectedResult = result.getSelectionModel().getSelectedItem();
+        if (selectedResult.getType().equals("Project")){
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/ViewApplyProject.fxml"));
+                root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
+        }
     }
 
 }
