@@ -34,7 +34,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <TableView fx:id="result" layoutX="6.0" prefHeight="157.0" prefWidth="585.0">
+            <TableView fx:id="result" layoutX="6.0" onMouseClicked="#resultPressed" prefHeight="157.0" prefWidth="585.0">
               <columns>
                 <TableColumn fx:id="name" prefWidth="379.0" text="Name" />
                 <TableColumn fx:id="type" minWidth="0.0" prefWidth="211.0" text="Type" />
