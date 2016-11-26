@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditProfileController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditProfileController">
    <children>
       <Label layoutX="248.0" layoutY="20.0" text="Edit Profile">
          <font>
@@ -29,9 +29,9 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <ComboBox layoutX="240.0" layoutY="110.0" prefWidth="225.0" />
-      <ComboBox layoutX="240.0" layoutY="178.0" prefWidth="225.0" />
-      <Label layoutX="240.0" layoutY="245.0" text="College of Computing ">
+      <ComboBox fx:id="editmajorBox" layoutX="240.0" layoutY="110.0" prefWidth="225.0" />
+      <ComboBox fx:id="edityearBox" layoutX="240.0" layoutY="178.0" prefWidth="225.0" />
+      <Label fx:id="departmentName" layoutX="240.0" layoutY="245.0" text="">
          <font>
             <Font size="16.0" />
          </font>
