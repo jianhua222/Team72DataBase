@@ -45,6 +45,8 @@ public class MainPageController {
     private RadioButton courseButton;
     @FXML
     private RadioButton bothButton;
+    @FXML
+    private TextField titleField;
 
     private List<Result> results;
 
@@ -123,14 +125,76 @@ public class MainPageController {
     }
     @FXML
     private void applyButtonPressed(){
-        String designation = designationBox.getValue().toString();
-        String year = yearBox.getValue().toString();
-        String major = majorBox.getValue().toString();
+        String designation;
+        String year;
+        String major;
+        String title;
+        if(designationBox.getValue()!=null){
+
+           designation = designationBox.getValue().toString();
+        }
+        else {
+            designation = "";
+        }
+        if(yearBox.getValue()!=null){
+
+            year = yearBox.getValue().toString();}
+        else {
+            year = "";
+        }
+        if(majorBox.getValue()!=null){
+
+            major = majorBox.getValue().toString();
+        }
+        else {
+            major = "";
+        }
+        title = titleField.getText();
         ArrayList<String> categories = CategorySelectController.selectedCategories;
+
     }
     @FXML
     private void resetButtonPressed(){
+        Connection con = null;
+        PreparedStatement ps1 = null;
+        PreparedStatement ps2 = null;
+        ResultSet rs = null;
 
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
+                    "cs4400_Team_72",
+                    "mmZwNaCR");
+            if(!con.isClosed())
+                System.out.println("Successfully connected to " +
+                        "MySQL server using TCP/IP...");
+            //This will be the first sql statement!
+            ps1 = con.prepareStatement( "SELECT cname FROM Course" );
+            ps2 = con.prepareStatement( "SELECT pname FROM Project" );
+            // 使用问号作为参数的标示
+            //ps.setString(1, user_name);
+            //ps.setString(2, password );
+            // 结果集
+            name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
+            type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
+            results = new ArrayList<>();
+            rs = ps1.executeQuery();
+            while (rs.next()) {
+                results.add(new Result(rs.getString("cname"),"Course"));
+                //
+                // resultView.getItems().add(new Result(rs.getString("cname"),"Course"));
+
+            }
+            rs = ps2.executeQuery();
+            while (rs.next()) {
+                results.add(new Result(rs.getString("pname"), "Project"));
+                //resultView.getItems().add(new Result(rs.getString("pname"), "Project"));
+            }
+            result.getItems().setAll(results);
+        } catch(Exception e) {
+            System.err.println("Exception: 11" + e.getMessage());
+
+        }
     }
     @FXML
     private void resultPressed(){

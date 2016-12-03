@@ -16,7 +16,7 @@
          <children>
             <Label layoutX="269.0" layoutY="34.0" text="Main Page" />
             <Label layoutX="49.0" layoutY="71.0" text="Title" />
-            <TextField layoutX="97.0" layoutY="67.0" />
+            <TextField fx:id="titleField" layoutX="97.0" layoutY="67.0" />
             <Label layoutX="45.0" layoutY="117.0" text="Designation" />
             <Label layoutX="47.0" layoutY="147.0" text="Major" />
             <Label layoutX="47.0" layoutY="176.0" text="Year" />
