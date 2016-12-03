@@ -14,6 +14,7 @@ public class UserManagement {
         PreparedStatement ps = null;
         ResultSet rs = null;
         String GT_email;
+
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
@@ -23,7 +24,7 @@ public class UserManagement {
                 System.out.println("Successfully connected to " +
                         "MySQL server using TCP/IP...");
             //This will be the first sql statement!
-            ps = con.prepareStatement( "SELECT user_name, GT_email, password FROM User WHERE user_name = ? AND password = ?" );
+            ps = con.prepareStatement( "SELECT user_name, GT_email, password,UserType FROM User WHERE user_name = ? AND password = ?" );
             // 使用问号作为参数的标示
 
             ps.setString(1, user_name);
@@ -34,7 +35,9 @@ public class UserManagement {
 
             if ( rs.next() ) {
                 GT_email = rs.getString("GT_email");
+                String userType = rs.getString("UserType");
                 currentUser = new User(user_name, GT_email, password);
+                currentUser.setUserType(userType);
                 return true;
             }else {
                 return false;

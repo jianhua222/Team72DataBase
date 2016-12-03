@@ -22,6 +22,7 @@ public class User {
     public void setYear(String year){
         this.year = year;
     }
+    public void setUserType(String userType){ this.UserType = userType;}
     public String getUser_name(){
         return user_name;
     }
