@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="209.0" layoutY="14.0" text="Add a Project">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Label layoutX="103.0" layoutY="68.0" text="Project Name:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="218.0" layoutY="68.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="145.0" layoutY="103.0" text="Advisor:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="218.0" layoutY="103.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="103.0" layoutY="137.0" text="Advisor Email:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="218.0" layoutY="137.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="117.0" layoutY="171.0" text="Description:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="218.0" layoutY="172.0" prefHeight="138.0" prefWidth="240.0" />
+      <Label layoutX="131.0" layoutY="322.0" text="Category:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="352.0" text="Designation:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="218.0" layoutY="352.0" prefHeight="25.0" prefWidth="160.0" />
+      <Hyperlink layoutX="379.0" layoutY="354.0" text="Add a new category" />
+      <Label layoutX="42.0" layoutY="390.0" prefHeight="25.0" prefWidth="151.0" text="Estimated # of Students:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="218.0" layoutY="389.0" prefHeight="25.0" prefWidth="240.0" />
+      <Label layoutX="61.0" layoutY="427.0" text="Major Requirement:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="218.0" layoutY="425.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="70.0" layoutY="462.0" text="Year Requirement:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox layoutX="218.0" layoutY="460.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="31.0" layoutY="495.0" text="Department Requirement:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="218.0" layoutY="320.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" text="Select Category" />
+      <ComboBox layoutX="218.0" layoutY="494.0" prefHeight="25.0" prefWidth="180.0" />
+      <Button layoutX="90.0" layoutY="579.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="49.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="373.0" layoutY="579.0" mnemonicParsing="false" prefHeight="7.0" prefWidth="64.0" text="Submit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
