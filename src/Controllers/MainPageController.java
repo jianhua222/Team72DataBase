@@ -30,7 +30,7 @@ public class MainPageController {
     @FXML
     private ComboBox yearBox;
     @FXML
-    private ComboBox categoryBox;
+    private Button selectCategory;
     @FXML
     private Button meButton;
     @FXML
@@ -45,7 +45,7 @@ public class MainPageController {
         designationBox.getItems().addAll(PopulatingComboDownBox.populateDesignationBox());
         yearBox.getItems().addAll(PopulatingComboDownBox.populateYearBox());
         majorBox.getItems().addAll(PopulatingComboDownBox.populateMajorBox());
-        categoryBox.getItems().addAll(PopulatingComboDownBox.populateCategoryBox());
+
         Connection con = null;
         PreparedStatement ps1 = null;
         PreparedStatement ps2 = null;
@@ -88,6 +88,19 @@ public class MainPageController {
         }
     }
     @FXML
+    private void selectCategoryPressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/CategorySelect.fxml"));
+            Stage primaryStage = (Stage) selectCategory.getScene().getWindow();
+            primaryStage.setTitle("MainPage");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        }
+        catch (IOException e){
+
+        }
+    }
+    @FXML
     private void meButtonPressed(){
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Me.fxml"));
@@ -102,6 +115,7 @@ public class MainPageController {
     }
     @FXML
     private void applyButtonPressed(){
+
 
     }
     @FXML

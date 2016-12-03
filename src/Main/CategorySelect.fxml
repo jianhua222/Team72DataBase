@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CategorySelectController">
+   <children>
+      <CheckBox fx:id="computingForGood" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" text="computing for good" />
+      <CheckBox fx:id="doingGoodForYourNeighborhood" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" text="doing good for your neighborhood" />
+      <CheckBox fx:id="reciprocalTeachingAndLearning" layoutX="14.0" layoutY="95.0" mnemonicParsing="false" text="reciprocal teaching and learning" />
+      <CheckBox fx:id="urbanDevelopment" layoutX="14.0" layoutY="132.0" mnemonicParsing="false" text="urban development" />
+      <CheckBox fx:id="adaptiveLearning" layoutX="14.0" layoutY="173.0" mnemonicParsing="false" text="adaptive learning" />
+      <CheckBox fx:id="technologyForSocialGood" layoutX="14.0" layoutY="208.0" mnemonicParsing="false" text="technology for social good" />
+      <CheckBox fx:id="sustainableCommunities" layoutX="14.0" layoutY="246.0" mnemonicParsing="false" text="sustainable communities" />
+      <CheckBox fx:id="crowdSourced" layoutX="14.0" layoutY="287.0" mnemonicParsing="false" text="crowd-sourced" />
+      <Button fx:id="applyButton" layoutX="412.0" layoutY="341.0" mnemonicParsing="false" onAction="#applyPressed" text="Apply Categories" />
+      <CheckBox fx:id="collaborativeAction" layoutX="14.0" layoutY="328.0" mnemonicParsing="false" text="collaborative action" />
+   </children>
+</Pane>
