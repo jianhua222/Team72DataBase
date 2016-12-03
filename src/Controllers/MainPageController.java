@@ -151,6 +151,55 @@ public class MainPageController {
         }
         title = titleField.getText();
         ArrayList<String> categories = CategorySelectController.selectedCategories;
+        String cs;
+        if(categories.size() == 0){
+            cs = "";
+        }
+        Connection con = null;
+        PreparedStatement ps1 = null;
+        PreparedStatement ps2 = null;
+        ResultSet rs = null;
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
+                    "cs4400_Team_72",
+                    "mmZwNaCR");
+            if(!con.isClosed())
+                System.out.println("Successfully connected to " +
+                        "MySQL server using TCP/IP...");
+            //This will be the first sql statement!
+            ps1 = con.prepareStatement( "SELECT cname FROM Course" );
+            ps2 = con.prepareStatement( "SELECT pname FROM Project" );
+            // 使用问号作为参数的标示
+            //ps.setString(1, user_name);
+            //ps.setString(2, password );
+            // 结果集
+            name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
+            type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
+            results = new ArrayList<>();
+            if(bothButton.isSelected()|| courseButton.isSelected()){
+                rs = ps1.executeQuery();
+                while (rs.next()) {
+                    results.add(new Result(rs.getString("cname"),"Course"));
+                    //
+                    // resultView.getItems().add(new Result(rs.getString("cname"),"Course"));
+
+                }
+            }
+            if(bothButton.isSelected()||courseButton.isSelected()){
+                rs = ps2.executeQuery();
+                while (rs.next()) {
+                    results.add(new Result(rs.getString("pname"), "Project"));
+                    //resultView.getItems().add(new Result(rs.getString("pname"), "Project"));
+                }
+            }
+
+            result.getItems().setAll(results);
+        } catch(Exception e) {
+            System.err.println("Exception: 11" + e.getMessage());
+
+        }
 
     }
     @FXML
