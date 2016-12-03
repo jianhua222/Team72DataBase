@@ -46,6 +46,8 @@ public class MainPageController {
     @FXML
     private RadioButton bothButton;
 
+    private List<Result> results;
+
     public static Result selectedResult;
     public void initialize(){
         designationBox.getItems().addAll(PopulatingComboDownBox.populateDesignationBox());
@@ -74,20 +76,20 @@ public class MainPageController {
             // 结果集
             name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
             type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
-            List<Result> tem = new ArrayList<>();
+            results = new ArrayList<>();
             rs = ps1.executeQuery();
             while (rs.next()) {
-                tem.add(new Result(rs.getString("cname"),"Course"));
+                results.add(new Result(rs.getString("cname"),"Course"));
                 //
                 // resultView.getItems().add(new Result(rs.getString("cname"),"Course"));
 
             }
             rs = ps2.executeQuery();
             while (rs.next()) {
-                tem.add(new Result(rs.getString("pname"), "Project"));
+                results.add(new Result(rs.getString("pname"), "Project"));
                 //resultView.getItems().add(new Result(rs.getString("pname"), "Project"));
             }
-            result.getItems().setAll(tem);
+            result.getItems().setAll(results);
         } catch(Exception e) {
             System.err.println("Exception: 11" + e.getMessage());
 
