@@ -27,17 +27,33 @@ public class LoginController {
     @FXML
     private void loginButtonpressed(){
         boolean successLogin = UserManagement.login(this.usernameField.getText(), this.passwordField.getText());
-        if (successLogin){
-            System.out.println("Successfully Login");
-            try{
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MainPage.fxml"));
-                Stage primaryStage = (Stage)loginButton.getScene().getWindow();
-                primaryStage.setTitle("MainPage");
-                primaryStage.setScene(new Scene(root, 600, 400));
-                primaryStage.show();
-            }
-            catch (IOException e){
 
+        if (successLogin){
+
+            if (UserManagement.currentUser.getUserType().equals("admin")){
+                System.out.println("Successfully Login");
+                try{
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/ChooseFunctionality.fxml"));
+                    Stage primaryStage = (Stage)loginButton.getScene().getWindow();
+                    primaryStage.setTitle("MainPage");
+                    primaryStage.setScene(new Scene(root, 600, 400));
+                    primaryStage.show();
+                }
+                catch (IOException e){
+
+                }
+            }
+            else {
+                System.out.println("Successfully Login");
+                try {
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MainPage.fxml"));
+                    Stage primaryStage = (Stage) loginButton.getScene().getWindow();
+                    primaryStage.setTitle("MainPage");
+                    primaryStage.setScene(new Scene(root, 600, 400));
+                    primaryStage.show();
+                } catch (IOException e) {
+
+                }
             }
         }else {
             Parent root;
