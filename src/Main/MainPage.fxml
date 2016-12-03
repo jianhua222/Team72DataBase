@@ -23,9 +23,9 @@
             <ComboBox fx:id="designationBox" layoutX="122.0" layoutY="113.0" prefWidth="150.0" promptText="Please Select " />
             <ComboBox fx:id="majorBox" layoutX="122.0" layoutY="143.0" prefWidth="150.0" promptText="Please Select " />
             <ComboBox fx:id="yearBox" layoutX="122.0" layoutY="172.0" prefWidth="150.0" promptText="Please Select " />
-            <RadioButton layoutX="324.0" layoutY="168.0" mnemonicParsing="false" text="Project" />
-            <RadioButton layoutX="404.0" layoutY="168.0" mnemonicParsing="false" text="Course" />
-            <RadioButton layoutX="481.0" layoutY="168.0" mnemonicParsing="false" text="Both" />
+            <RadioButton fx:id="projectButton" layoutX="324.0" layoutY="168.0" mnemonicParsing="false" text="Project" />
+            <RadioButton fx:id="courseButton" layoutX="404.0" layoutY="168.0" mnemonicParsing="false" text="Course" />
+            <RadioButton fx:id="bothButton" layoutX="481.0" layoutY="168.0" mnemonicParsing="false" text="Both" />
             <Button fx:id="applyButton" layoutX="353.0" layoutY="195.0" mnemonicParsing="false" onAction="#applyButtonPressed" text="Apply Filter" />
             <Button fx:id="resetButton" layoutX="454.0" layoutY="195.0" mnemonicParsing="false" onAction="#resetButtonPressed" text="Reset Filer" />
             <Button fx:id="meButton" layoutX="27.0" layoutY="15.0" mnemonicParsing="false" onAction="#meButtonPressed" text="Me" />

@@ -9,7 +9,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Base64;
 
 /**
  * Created by Allen on 12/3/2016.
@@ -36,7 +35,7 @@ public class CategorySelectController {
     @FXML
     private Button applyButton;
 
-    public ArrayList<String> selectedCategories = new ArrayList<>();
+    public static ArrayList<String> selectedCategories = new ArrayList<>();
     @FXML
     public void initialize(){
         selectedCategories = new ArrayList<>();

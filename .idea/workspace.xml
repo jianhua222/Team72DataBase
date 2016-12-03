@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/CategorySelectController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/CategorySelect.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/CategorySelectController.java" afterPath="$PROJECT_DIR$/src/Controllers/CategorySelectController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/MainPageController.java" afterPath="$PROJECT_DIR$/src/Controllers/MainPageController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/MainPage.fxml" afterPath="$PROJECT_DIR$/src/Main/MainPage.fxml" />
     </list>
@@ -64,12 +63,12 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="MainPage.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/MainPage.fxml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="25">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,8 +80,8 @@
       <file leaf-file-name="MainPageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controllers/MainPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+            <state relative-caret-position="-1850">
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -91,12 +90,12 @@
       <file leaf-file-name="CategorySelectController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/CategorySelectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-579">
-              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+            <state relative-caret-position="-1244">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
+                <element signature="e#1008#1009#0" expanded="true" />
+                <element signature="e#1062#1063#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,9 +104,11 @@
       <file leaf-file-name="MeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controllers/MeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
+            <state relative-caret-position="475">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="36" selection-end-column="9" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +116,7 @@
       <file leaf-file-name="CategorySelect.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/CategorySelect.fxml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="350">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
@@ -182,9 +183,9 @@
         <option value="$PROJECT_DIR$/src/Models/Result.java" />
         <option value="$PROJECT_DIR$/src/Models/Application.java" />
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
-        <option value="$PROJECT_DIR$/src/Main/MainPage.fxml" />
         <option value="$PROJECT_DIR$/src/Main/CategorySelect.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/CategorySelectController.java" />
+        <option value="$PROJECT_DIR$/src/Main/MainPage.fxml" />
         <option value="$PROJECT_DIR$/src/Controllers/MainPageController.java" />
       </list>
     </option>
@@ -242,6 +243,20 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="Scratches">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Changed Files" />
+        <subPane subId="Project Files" />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -313,20 +328,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Changed Files" />
-        <subPane subId="Project Files" />
-      </pane>
-      <pane id="Scratches">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.scratch.ScratchProjectViewPane$MyProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -836,7 +837,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480197898713</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Category select function added">
+      <created>1480785909356</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1480785909356</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -938,7 +946,8 @@
     <MESSAGE value="populating combo box  updated" />
     <MESSAGE value="Result model created" />
     <MESSAGE value="MainPage controller updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="MainPage controller updated" />
+    <MESSAGE value="Category select function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category select function added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1097,7 +1106,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1166,6 +1174,50 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/CategorySelect.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/MeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/CategorySelectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1244">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/MainPage.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -1177,52 +1229,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/MainPage.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/CategorySelect.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/MeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="36" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/CategorySelectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-579">
-          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/MainPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+        <state relative-caret-position="-1850">
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
           <folding />
         </state>
       </provider>

@@ -39,6 +39,12 @@ public class MainPageController {
     private TableColumn<Result,String> name;
     @FXML
     private TableColumn<Result, String> type;
+    @FXML
+    private RadioButton projectButton;
+    @FXML
+    private RadioButton courseButton;
+    @FXML
+    private RadioButton bothButton;
 
     public static Result selectedResult;
     public void initialize(){
@@ -115,8 +121,10 @@ public class MainPageController {
     }
     @FXML
     private void applyButtonPressed(){
-
-
+        String designation = designationBox.getValue().toString();
+        String year = yearBox.getValue().toString();
+        String major = majorBox.getValue().toString();
+        ArrayList<String> categories = CategorySelectController.selectedCategories;
     }
     @FXML
     private void resetButtonPressed(){
