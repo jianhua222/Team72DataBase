@@ -4,7 +4,9 @@ import Models.PopulatingComboDownBox;
 import Models.User;
 import Models.UserManagement;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 import java.sql.*;
 
@@ -16,6 +18,10 @@ public class ViewApplyProjectController {
     private Label projectName;
     @FXML
     private Label projectContent;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Button applyButton;
     public void initialize(){
         String name = MainPageController.selectedResult.getName();
         Connection con = null;
@@ -61,5 +67,14 @@ public class ViewApplyProjectController {
                 e.printStackTrace();
             }
         }
+    }
+    @FXML
+    private void backPressed(){
+        Stage stage = (Stage) backButton.getScene().getWindow();
+        stage.close();
+    }
+    @FXML
+    private void applyButtonPressed(){
+
     }
 }

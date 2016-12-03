@@ -69,16 +69,10 @@ public class CategorySelectController {
         if(collaborativeAction.isSelected()){
             selectedCategories.add("collaborative action");
         }
-        try{
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MainPage.fxml"));
-            Stage primaryStage = (Stage) applyButton.getScene().getWindow();
-            primaryStage.setTitle("Me");
-            primaryStage.setScene(new Scene(root, 600, 400));
-            primaryStage.show();
-        }
-        catch (IOException e){
 
-        }
+            Stage stage = (Stage) applyButton.getScene().getWindow();
+            stage.close();
+
     }
 
 }

@@ -99,14 +99,14 @@ public class MainPageController {
     }
     @FXML
     private void selectCategoryPressed(){
-        try{
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/CategorySelect.fxml"));
-            Stage primaryStage = (Stage) selectCategory.getScene().getWindow();
-            primaryStage.setTitle("MainPage");
-            primaryStage.setScene(new Scene(root, 600, 400));
-            primaryStage.show();
-        }
-        catch (IOException e){
+        Parent root;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/CategorySelect.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
 
         }
     }
@@ -126,31 +126,27 @@ public class MainPageController {
     @FXML
     private void applyButtonPressed(){
         String designation;
-        String year;
-        String major;
+        ArrayList<String> requirements = new ArrayList<>();
         String title;
         if(designationBox.getValue()!=null){
-
            designation = designationBox.getValue().toString();
+            System.out.println(designation);
         }
         else {
             designation = "";
         }
         if(yearBox.getValue()!=null){
 
-            year = yearBox.getValue().toString();}
-        else {
-            year = "";
-        }
+            requirements.add((String) yearBox.getValue());}
+
         if(majorBox.getValue()!=null){
 
-            major = majorBox.getValue().toString();
+            requirements.add((String) majorBox.getValue());
         }
-        else {
-            major = "";
-        }
+        System.out.println(requirements);
         title = titleField.getText();
         ArrayList<String> categories = CategorySelectController.selectedCategories;
+        System.out.println(categories);
         String cs;
         if(categories.size() == 0){
             cs = "";
@@ -169,12 +165,59 @@ public class MainPageController {
                 System.out.println("Successfully connected to " +
                         "MySQL server using TCP/IP...");
             //This will be the first sql statement!
-            ps1 = con.prepareStatement( "SELECT cname FROM Course" );
-            ps2 = con.prepareStatement( "SELECT pname FROM Project" );
+
             // 使用问号作为参数的标示
-            //ps.setString(1, user_name);
+            String temtitle1= "";
+            if (title.length()!=0) {
+                temtitle1=temtitle1+ " cname='"+title+"' and";
+            }
+            String temdes1="";
+            if (designation.length()!=0) {
+                temdes1=temdes1 + " Desig_name='"+designation+"' and";
+            }
+            String temcate1="";
+            if (categories.size()!=0){
+                for (int i =0; i<categories.size();i++){
+                    temcate1=temcate1 + " cnum in (select cnum from Course" +
+                            " join Course_is_Category on cnum=course_num"+
+                            " where category_name='" + categories.get(i) +"') and";
+                }
+            }
+            String temcourse = " select cname from Course where "+temtitle1 + temdes1 + temcate1;
+            temcourse = temcourse.substring(0,temcourse.length()-3);
+            String temtitle= "";
+            if (title.length()!=0) {
+                temtitle=temtitle+ " pname='"+title+"' and";
+            }
+            String temdes="";
+            if (designation.length()!=0) {
+                temdes=temdes + " Desig_name='"+designation+"' and";
+            }
+            String temreq="";
+            if (requirements.size()!=0){
+                for (int i =0; i<requirements.size();i++){
+                    temreq=temreq + " pname in (select pname from Project" +
+                            " join Requirement on pname=proj_name"+
+                            " where proj_requirements='" + requirements.get(i)+"') and";
+                }
+
+            }
+            String temcate="";
+            if (categories.size()!=0){
+                for (int i =0; i<categories.size();i++){
+                    temcate=temcate + " pname in (select pname from Project" +
+                            " join Proj_is_Category on pname=proj_name"+
+                            " where category_name='" + categories.get(i) +"') and";
+                }
+            }
+            String temporj = "select pname from Project where "+temtitle + temdes + temreq + temcate;
+            temporj = temporj.substring(0,temporj.length()-3);
+            ps1 = con.prepareStatement( temcourse);
+            ps2 = con.prepareStatement( temporj );
+
             //ps.setString(2, password );
-            // 结果集
+            //
+            System.out.println(ps2.toString());
             name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
             type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
             results = new ArrayList<>();
@@ -187,7 +230,7 @@ public class MainPageController {
 
                 }
             }
-            if(bothButton.isSelected()||courseButton.isSelected()){
+            if(bothButton.isSelected()||projectButton.isSelected()){
                 rs = ps2.executeQuery();
                 while (rs.next()) {
                     results.add(new Result(rs.getString("pname"), "Project"));
