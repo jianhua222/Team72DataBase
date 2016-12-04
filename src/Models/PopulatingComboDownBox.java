@@ -117,6 +117,38 @@ public class PopulatingComboDownBox {
         }
         return tem;
     }
+    public static ArrayList<String> populateDepartmentBox(){
+        ArrayList<String> tem = new ArrayList<>();
+        tem.add("No Requirement");
+        Connection con = null;
+        PreparedStatement ps1 = null;
+        ResultSet rs = null;
+        try {
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+            con = DriverManager.getConnection("jdbc:mysql://academic-mysql.cc.gatech.edu/cs4400_Team_72",
+                    "cs4400_Team_72",
+                    "mmZwNaCR");
+            if(!con.isClosed())
+                System.out.println("Successfully connected to " +
+                        "MySQL server using TCP/IP...");
+            //This will be the first sql statement!
+            ps1 = con.prepareStatement( "SELECT depart_name FROM department;" );
+            // 使用问号作为参数的标示
+            //ps.setString(1, user_name);
+            //ps.setString(2, password );
+            // 结果集
+
+            rs = ps1.executeQuery();
+
+            while (rs.next()) {
+                tem.add(rs.getString("depart_name"));
+            }
+            System.out.print(tem);
+        } catch(Exception e) {
+            System.err.println("Exception: 11" + e.getMessage());
+        }
+        return tem;
+    }
     public static HashMap<String,String> populateResult() {
         HashMap<String,String> tem = new HashMap<>();
         Connection con;

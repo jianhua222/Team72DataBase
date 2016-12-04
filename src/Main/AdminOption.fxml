@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminOptionController">
+   <children>
+      <ComboBox fx:id="dropDown" layoutX="225.0" layoutY="140.0" prefWidth="150.0" promptText="Please Select" />
+      <Button fx:id="submitButton" layoutX="191.0" layoutY="229.0" mnemonicParsing="false" onAction="#submitButtonPressed" text="Submit" />
+      <Button fx:id="backButton" layoutX="363.0" layoutY="229.0" mnemonicParsing="false" onAction="#backButtonPressed" text="Back" />
+   </children>
+</Pane>

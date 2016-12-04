@@ -14,19 +14,21 @@ import java.io.IOException;
  */
 public class AdminAddCourseController {
     @FXML
-    private Button backButton;
+    private Button categoryButton;
 
     @FXML
-    private void BackPressed(){
-        try{
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminChooseFunctionality.fxml"));
-            Stage primaryStage = (Stage) backButton.getScene().getWindow();
-            primaryStage.setTitle("Me");
-            primaryStage.setScene(new Scene(root, 600, 400));
-            primaryStage.show();
-        }
-        catch (IOException e){
+    private void categoryButtonPressed(){
+        Parent root;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/CategorySelect.fxml"));
+            root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        }catch (IOException e){
 
         }
     }
+
+
 }
