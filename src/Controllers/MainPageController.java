@@ -178,8 +178,8 @@ public class MainPageController {
             String temcate1="";
             if (categories.size()!=0){
                 for (int i =0; i<categories.size();i++){
-                    temcate1=temcate1 + " cnum in (select cnum from Course" +
-                            " join Course_is_Category on cnum=course_num"+
+                    temcate1=temcate1 + " cnumber in (select cnumber from Course" +
+                            " join Course_is_Category on cnumber=course_num"+
                             " where category_name='" + categories.get(i) +"') and";
                 }
             }
@@ -217,7 +217,7 @@ public class MainPageController {
 
             //ps.setString(2, password );
             //
-            System.out.println(ps2.toString());
+            System.out.println(ps1.toString());
             name.setCellValueFactory(new PropertyValueFactory<Result, String>("name"));
             type.setCellValueFactory(new PropertyValueFactory<Result, String>("type"));
             results = new ArrayList<>();
@@ -295,6 +295,18 @@ public class MainPageController {
             Parent root;
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/ViewApplyProject.fxml"));
+                root = loader.load();
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
+        }
+        else if (selectedResult.getType().equals("Course")){
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/ViewCourse.fxml"));
                 root = loader.load();
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));

@@ -57,7 +57,7 @@ public class MeController {
     private void myApplicationPressed(){
         try{
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MyApplication.fxml"));
-            Stage primaryStage = (Stage) editProfile.getScene().getWindow();
+            Stage primaryStage = (Stage) myApplication.getScene().getWindow();
             primaryStage.setTitle("Me");
             primaryStage.setScene(new Scene(root, 600, 400));
             primaryStage.show();

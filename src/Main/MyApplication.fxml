@@ -7,17 +7,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MyApplicationController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MyApplicationController">
    <children>
       <Label layoutX="227.0" layoutY="18.0" text="My Application">
          <font>
             <Font size="22.0" />
          </font></Label>
-       <TableView layoutX="50.0" layoutY="80.0" prefHeight="230.0" prefWidth="500.0">
+       <TableView fx:id="result" layoutX="50.0" layoutY="80.0" prefHeight="230.0" prefWidth="500.0">
            <columns>
-               <TableColumn prefWidth="100.0" text="Date" />
-               <TableColumn prefWidth="300" text="Project Name" />
-               <TableColumn prefWidth="100" text="Status" />
+               <TableColumn fx:id="date" prefWidth="100.0" text="Date" />
+               <TableColumn fx:id="name" prefWidth="300" text="Project Name" />
+               <TableColumn fx:id="status" prefWidth="100" text="Status" />
            </columns>
        </TableView>
        <Button fx:id="backToMe" layoutX="258.0" layoutY="334.0" mnemonicParsing="false" onAction="#backToMePressed" prefHeight="18.0" prefWidth="85.0" text="Back">
