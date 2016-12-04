@@ -29,11 +29,11 @@
          <font>
             <Font size="15.0" />
          </font></Hyperlink>
-      <Hyperlink layoutX="170.0" layoutY="255.0" text="Add a Course">
+      <Hyperlink fx:id="addCourse" layoutX="170.0" layoutY="255.0" onAction="#addCoursePressed" text="Add a Course">
          <font>
             <Font size="15.0" />
          </font></Hyperlink>
-      <Button layoutX="260.0" layoutY="325.0" mnemonicParsing="false" text="Log out">
+      <Button fx:id="logout" layoutX="260.0" layoutY="325.0" mnemonicParsing="false" onAction="#LogoutPressed" text="Log out">
          <font>
             <Font size="15.0" />
          </font></Button>

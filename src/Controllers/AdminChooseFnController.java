@@ -1,9 +1,11 @@
 package Controllers;
 
+import Models.UserManagement;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 
@@ -22,6 +24,10 @@ public class AdminChooseFnController {
     private Hyperlink viewAprt;
     @FXML
     private Hyperlink addProj;
+    @FXML
+    private Hyperlink addCourse;
+    @FXML
+    private Button logout;
 
 
     @FXML
@@ -69,11 +75,38 @@ public class AdminChooseFnController {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminAddProject.fxml"));
             Stage primaryStage = (Stage) addProj.getScene().getWindow();
             primaryStage.setTitle("Choose Functionality");
-            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setScene(new Scene(root, 600, 650));
             primaryStage.show();
         }
         catch (IOException e){
         }
     }
 
+    @FXML
+    private void addCoursePressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminAddProject.fxml"));
+            Stage primaryStage = (Stage) addCourse.getScene().getWindow();
+            primaryStage.setTitle("Choose Functionality");
+            primaryStage.setScene(new Scene(root, 600, 650));
+            primaryStage.show();
+        }
+        catch (IOException e){
+        }
+    }
+
+    @FXML
+    private void LogoutPressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Login.fxml"));
+            Stage primaryStage = (Stage) logout.getScene().getWindow();
+            primaryStage.setTitle("Choose Functionality");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+            UserManagement.currentUser = null;
+        }
+        catch (IOException e){
+        }
+
+    }
 }
