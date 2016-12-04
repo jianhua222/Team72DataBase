@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminViewApRptController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.71" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminViewApRptController">
    <children>
       <AnchorPane layoutX="3.0" layoutY="81.0" prefHeight="227.0" prefWidth="594.0">
          <children>
-            <TableView layoutX="23.0" prefHeight="238.0" prefWidth="552.0">
+            <TableView fx:id="result" layoutX="28.0" prefHeight="238.0" prefWidth="552.0">
               <columns>
-                  <TableColumn prefWidth="221.00001525878906" text="Project" />
-                <TableColumn prefWidth="112.0" text="#of Applicants" />
-                <TableColumn prefWidth="111.0" text="accept rate" />
-                  <TableColumn prefWidth="106.0" text="top 3 major" />
+                  <TableColumn fx:id="name" prefWidth="199.0" text="Project" />
+                <TableColumn fx:id="number" prefWidth="106.0" text="#of Applicants" />
+                <TableColumn fx:id="rate" prefWidth="88.0" text="accept rate" />
+                  <TableColumn fx:id="major" prefWidth="158.0" text="top 3 major" />
               </columns>
             </TableView>
          </children>
@@ -27,7 +27,7 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <Button layoutX="39.0" layoutY="328.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="75.0" text="Back">
+      <Button fx:id="backButton" layoutX="39.0" layoutY="328.0" mnemonicParsing="false" onAction="#backButtonPressed" prefHeight="16.0" prefWidth="75.0" text="Back">
          <font>
             <Font size="14.0" />
          </font>
