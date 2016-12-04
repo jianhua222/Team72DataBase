@@ -12,12 +12,12 @@
    <children>
       <AnchorPane layoutX="3.0" layoutY="81.0" prefHeight="227.0" prefWidth="594.0">
          <children>
-            <TableView fx:id="result" layoutX="28.0" prefHeight="238.0" prefWidth="552.0">
+            <TableView fx:id="result" layoutX="28.0" prefHeight="238.0" prefWidth="757.0">
               <columns>
                   <TableColumn fx:id="name" prefWidth="199.0" text="Project" />
                 <TableColumn fx:id="number" prefWidth="106.0" text="#of Applicants" />
                 <TableColumn fx:id="rate" prefWidth="88.0" text="accept rate" />
-                  <TableColumn fx:id="major" prefWidth="158.0" text="top 3 major" />
+                  <TableColumn fx:id="major" prefWidth="363.0" text="top 3 major" />
               </columns>
             </TableView>
          </children>
@@ -32,6 +32,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="39.0" layoutY="57.0" prefHeight="17.0" prefWidth="263.0" text="TO DO:   Fetch the stats and display here  //label" />
+      <Label fx:id="info" layoutX="39.0" layoutY="57.0" prefHeight="17.0" prefWidth="263.0" text="TO DO:   Fetch the stats and display here  //label" />
    </children>
 </Pane>

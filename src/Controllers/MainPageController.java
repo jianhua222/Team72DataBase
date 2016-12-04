@@ -247,6 +247,10 @@ public class MainPageController {
     }
     @FXML
     private void resetButtonPressed(){
+        designationBox.getSelectionModel().select(null);
+        yearBox.getSelectionModel().select(null);
+        majorBox.getSelectionModel().select(null);
+
         Connection con = null;
         PreparedStatement ps1 = null;
         PreparedStatement ps2 = null;

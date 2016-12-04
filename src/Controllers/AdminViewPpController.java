@@ -53,7 +53,7 @@ public class AdminViewPpController{
                 System.out.println("Successfully connected to " +
                         "MySQL server using TCP/IP...");
             //This will be the first sql statement!
-            ps1 = con.prepareStatement( "SELECT proj_name, COUNT(*) AS c FROM Stud_Apply_Proj GROUP BY proj_name ORDER BY c DESC" );
+            ps1 = con.prepareStatement( "SELECT proj_name, COUNT(*) AS c FROM Stud_Apply_Proj GROUP BY proj_name ORDER BY c DESC LIMIT 10" );
             name.setCellValueFactory(new PropertyValueFactory<PopularProject, String>("name"));
             number.setCellValueFactory(new PropertyValueFactory<PopularProject, Integer>("number"));
 

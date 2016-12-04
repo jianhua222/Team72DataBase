@@ -6,9 +6,9 @@ package Models;
 public class Report {
     private String name;
     private Integer number;
-    private String rate;
+    private double rate;
     private String major;
-    public Report(String name, Integer number, String rate, String major){
+    public Report(String name, Integer number, double rate, String major){
         this.name = name;
         this.number = number;
         this.rate = rate;
@@ -20,7 +20,7 @@ public class Report {
     public Integer getNumber(){
         return number;
     }
-    public String getRate(){
+    public double getRate(){
         return rate;
     }
     public String getMajor(){

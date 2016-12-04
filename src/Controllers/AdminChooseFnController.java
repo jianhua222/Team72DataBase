@@ -62,7 +62,7 @@ public class AdminChooseFnController {
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminViewApplicationReport.fxml"));
             Stage primaryStage = (Stage) viewAprt.getScene().getWindow();
             primaryStage.setTitle("Choose Functionality");
-            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setScene(new Scene(root, 800, 400));
             primaryStage.show();
         }
         catch (IOException e){
