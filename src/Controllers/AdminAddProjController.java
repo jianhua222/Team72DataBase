@@ -76,7 +76,7 @@ public class AdminAddProjController {
         String des = desArea.getText();
         ArrayList<String> categories = CategorySelectController.selectedCategories;
         String designation = designationBox.getValue();
-        Integer number = Integer.parseInt(numberField.getText());
+
         String major = majorBox.getValue();
         String year = yearBox.getValue();
         String department = departmentBox.getValue();
@@ -86,6 +86,7 @@ public class AdminAddProjController {
             System.out.println("enter all information");
         }
         else {
+            Integer number = Integer.parseInt(numberField.getText());
             Connection con = null;
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -148,6 +149,16 @@ public class AdminAddProjController {
 
             } catch(Exception e) {
                 System.err.println("Exception: 11" + e.getMessage());
+
+            }
+            try{
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminChooseFunctionality.fxml"));
+                Stage primaryStage = (Stage) backButton.getScene().getWindow();
+                primaryStage.setTitle("Me");
+                primaryStage.setScene(new Scene(root, 600, 400));
+                primaryStage.show();
+            }
+            catch (IOException e){
 
             }
         }

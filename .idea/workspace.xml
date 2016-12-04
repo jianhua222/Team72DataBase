@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java" line="41" mnemonic="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controllers/AdminOptionController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/AdminOption.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/AdminViewProjectResult.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java" afterPath="$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/AdminAddProjController.java" afterPath="$PROJECT_DIR$/src/Controllers/AdminAddProjController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/AdminViewApplicationController.java" afterPath="$PROJECT_DIR$/src/Controllers/AdminViewApplicationController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controllers/AdminChooseFnController.java" afterPath="$PROJECT_DIR$/src/Controllers/AdminChooseFnController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/AdminAddCourse.fxml" afterPath="$PROJECT_DIR$/src/Main/AdminAddCourse.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/AdminAddProject.fxml" afterPath="$PROJECT_DIR$/src/Main/AdminAddProject.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/AdminViewApplication.fxml" afterPath="$PROJECT_DIR$/src/Main/AdminViewApplication.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/PopulatingComboDownBox.java" afterPath="$PROJECT_DIR$/src/Models/PopulatingComboDownBox.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,25 +68,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminAddCourseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java">
+      <file leaf-file-name="AdminAddProjController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddProjController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="152" column="13" selection-start-line="149" selection-start-column="12" selection-end-line="152" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminChooseFnController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/AdminChooseFnController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminAddCourse.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main/AdminAddCourse.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+      <file leaf-file-name="AdminAddCourseController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        </entry>
+      </file>
+      <file leaf-file-name="AdminAddCourse.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/AdminAddCourse.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-510">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
         </entry>
@@ -148,9 +165,10 @@
         <option value="$PROJECT_DIR$/src/Models/PopulatingComboDownBox.java" />
         <option value="$PROJECT_DIR$/src/Controllers/MainPageController.java" />
         <option value="$PROJECT_DIR$/src/Main/AdminAddProject.fxml" />
+        <option value="$PROJECT_DIR$/src/Main/AdminAddCourse.fxml" />
+        <option value="$PROJECT_DIR$/src/Controllers/AdminChooseFnController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/AdminAddProjController.java" />
         <option value="$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java" />
-        <option value="$PROJECT_DIR$/src/Main/AdminAddCourse.fxml" />
       </list>
     </option>
   </component>
@@ -865,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480199222662</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="admin updates">
+      <created>1480872875873</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1480872875873</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -963,7 +988,8 @@
     <MESSAGE value="mainpage update" />
     <MESSAGE value="edit profile update" />
     <MESSAGE value="viewapplyproject update" />
-    <option name="LAST_COMMIT_MESSAGE" value="viewapplyproject update" />
+    <MESSAGE value="admin updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -974,16 +1000,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main/Login.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1379,16 +1395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddProjController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="69" column="5" selection-start-line="57" selection-start-column="3" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/AdminOptionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1396,14 +1402,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1419,14 +1417,40 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/AdminAddCourse.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+      <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/AdminChooseFnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddProjController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="152" column="13" selection-start-line="149" selection-start-column="12" selection-end-line="152" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/AdminAddCourseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="103" column="42" selection-start-line="103" selection-start-column="42" selection-end-line="103" selection-end-column="42" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>

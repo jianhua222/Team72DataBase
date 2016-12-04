@@ -85,7 +85,7 @@ public class AdminChooseFnController {
     @FXML
     private void addCoursePressed(){
         try{
-            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminAddProject.fxml"));
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminAddCourse.fxml"));
             Stage primaryStage = (Stage) addCourse.getScene().getWindow();
             primaryStage.setTitle("Choose Functionality");
             primaryStage.setScene(new Scene(root, 600, 650));
