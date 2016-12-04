@@ -21,11 +21,11 @@
          <font>
             <Font size="15.0" />
          </font></Hyperlink>
-      <Hyperlink layoutX="170.0" layoutY="175.0" text="View Application Report">
+      <Hyperlink fx:id="viewAprt" layoutX="170.0" layoutY="175.0" onAction="#adminViewAprtPressed" text="View Application Report">
          <font>
             <Font size="15.0" />
          </font></Hyperlink>
-      <Hyperlink layoutX="170.0" layoutY="215.0" text="Add a Project">
+      <Hyperlink fx:id="addProj" layoutX="170.0" layoutY="215.0" onAction="#adminAddProjPressed" text="Add a Project">
          <font>
             <Font size="15.0" />
          </font></Hyperlink>

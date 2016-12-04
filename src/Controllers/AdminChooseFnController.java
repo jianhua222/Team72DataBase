@@ -18,6 +18,10 @@ public class AdminChooseFnController {
     private Hyperlink viewAp;
     @FXML
     private Hyperlink viewPp;
+    @FXML
+    private Hyperlink viewAprt;
+    @FXML
+    private Hyperlink addProj;
 
 
     @FXML
@@ -45,4 +49,31 @@ public class AdminChooseFnController {
         catch (IOException e){
         }
     }
+
+    @FXML
+    private void adminViewAprtPressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminViewApplicationReport.fxml"));
+            Stage primaryStage = (Stage) viewAprt.getScene().getWindow();
+            primaryStage.setTitle("Choose Functionality");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        }
+        catch (IOException e){
+        }
+    }
+
+    @FXML
+    private void adminAddProjPressed(){
+        try{
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminAddProject.fxml"));
+            Stage primaryStage = (Stage) addProj.getScene().getWindow();
+            primaryStage.setTitle("Choose Functionality");
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.show();
+        }
+        catch (IOException e){
+        }
+    }
+
 }

@@ -12,6 +12,6 @@ import java.io.IOException;
 /**
  * Created by Qi Zheng on 12/3/2016.
  */
-public class AdminViewApplication {
+public class AdminViewApplicationController {
 
 }
