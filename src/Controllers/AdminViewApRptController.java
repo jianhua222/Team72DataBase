@@ -1,9 +1,6 @@
 package Controllers;
 
-import Models.PopularProject;
-import Models.ProjectAndMajor;
-import Models.Report;
-import Models.Result;
+import Models.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -42,19 +39,25 @@ public class AdminViewApRptController {
     @FXML
     private TableColumn<Report, Integer> major;
 
+    @FXML
+    private Label info;
 
     private List<Report> results;
     @FXML
     public void initialize(){
 
-
+        info.setText(CheckingTotal.check());
         Connection con = null;
         PreparedStatement ps1 = null;
         PreparedStatement ps2 = null;
         PreparedStatement ps3 = null;
+        PreparedStatement ps4 = null;
+        PreparedStatement ps5 = null;
         ResultSet rs1 = null;
         ResultSet rs2 = null;
         ResultSet rs3 = null;
+        ResultSet rs4 = null;
+        ResultSet rs5 = null;
 
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -115,10 +118,12 @@ public class AdminViewApRptController {
             }
             System.out.println(results);
             result.getItems().setAll(results);
+
         } catch(Exception e) {
             System.err.println("Exception: 11" + e.getMessage());
 
         }
+
     }
     @FXML
     private void backButtonPressed(){
