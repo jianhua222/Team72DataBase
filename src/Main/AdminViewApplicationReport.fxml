@@ -32,6 +32,6 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="info" layoutX="39.0" layoutY="57.0" prefHeight="17.0" prefWidth="457.0" text="TO DO:   Fetch the stats and display here  //label" />
+      <Label fx:id="info" layoutX="43.0" layoutY="57.0" prefHeight="17.0" prefWidth="457.0" text="TO DO:   Fetch the stats and display here  //label" />
    </children>
 </Pane>
