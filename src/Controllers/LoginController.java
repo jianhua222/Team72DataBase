@@ -33,7 +33,7 @@ public class LoginController {
             if (UserManagement.currentUser.getUserType().equals("admin")){
                 System.out.println("Successfully Login");
                 try{
-                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/ChooseFunctionality.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/AdminChooseFunctionality.fxml"));
                     Stage primaryStage = (Stage)loginButton.getScene().getWindow();
                     primaryStage.setTitle("MainPage");
                     primaryStage.setScene(new Scene(root, 600, 400));
