@@ -42,7 +42,7 @@ public class CheckingTotal {
             total1 = rs4.getInt("c");
             rs5 = ps5.executeQuery();
             rs5.next();
-            total2 = rs4.getInt("c");
+            total2 = rs5.getInt("c");
             tem = ""+total1+" applications in total, accepted "+total2+" applications";
             System.out.println(tem);
             System.out.println(tem);
