@@ -4,10 +4,14 @@ import Models.PopulatingComboDownBox;
 import Models.User;
 import Models.UserManagement;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.*;
 
 /**
@@ -97,6 +101,23 @@ public class ViewApplyProjectController {
     }
     @FXML
     private void applyButtonPressed(){
+        if(!UserManagement.checkingRequirement()){
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/Error.fxml"));
+                root = loader.load();
+                //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
+                ErrorController controller =  loader.<ErrorController>getController();
+                String errorText = "Not Qualified";
+                controller.setLabel(errorText);
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
+        }
+        else {
         String name = MainPageController.selectedResult.getName();
         String userName = UserManagement.currentUser.getUser_name();
         Connection con = null;
@@ -135,10 +156,24 @@ public class ViewApplyProjectController {
                 stage.close();
             }
             else {
-                System.out.println("applied");
+                Parent root;
+                try {
+                    FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/Error.fxml"));
+                    root = loader.load();
+                    //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
+                    ErrorController controller =  loader.<ErrorController>getController();
+                    String errorText = "You have applied this project.";
+                    controller.setLabel(errorText);
+                    Stage stage = new Stage();
+                    stage.setScene(new Scene(root));
+                    stage.show();
+                }catch (IOException e){
+
+                }
             }
         } catch(Exception e) {
             System.err.println("Exception: " + e.getMessage());
+        }
         }
     }
 }

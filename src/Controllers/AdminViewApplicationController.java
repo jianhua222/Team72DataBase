@@ -92,7 +92,20 @@ public class AdminViewApplicationController {
             }
         }
         else {
-            System.out.println("project has been " + selectedResult.getStatus());
+            Parent root;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("Main/Error.fxml"));
+                root = loader.load();
+                //Parent root = FXMLLoader.load(getClass().getResource("Main/Register.fxml"));
+                ErrorController controller =  loader.<ErrorController>getController();
+                String errorText = "project has been " + selectedResult.getStatus();
+                controller.setLabel(errorText);
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.show();
+            }catch (IOException e){
+
+            }
         }
     }
     @FXML
