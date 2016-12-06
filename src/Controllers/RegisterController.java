@@ -34,7 +34,7 @@ public class RegisterController {
         if (this.passwordField.getText().equals(this.confirmField.getText())){
             UserManagement.register(this.usernameField.getText(), this.emailField.getText(), this.passwordField.getText());
             try{
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/MainPage.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Main/Login.fxml"));
                 Stage primaryStage = (Stage)createButton.getScene().getWindow();
                 primaryStage.setTitle("MainPage");
                 primaryStage.setScene(new Scene(root, 600, 400));
